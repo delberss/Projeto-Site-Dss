@@ -40,6 +40,22 @@ img{max-width:  100%;}
         ;
     }
 
+    .logo{
+        grid-area: logo; /* define nome para o template area que sera usado no header*/
+    }
+
+    .search{
+        grid-area: search; /* define nome para o template area que sera usado no header*/
+    }
+
+    nav{
+        grid-area: nav; /* define nome para o template area que sera usado no header*/
+    }
+
+    .ads{
+        grid-area: ads; /* define nome para o template area que sera usado no header*/
+    }
+
     main{
         grid-area: main; /*identifica a area que colocamos no container*/
     }
