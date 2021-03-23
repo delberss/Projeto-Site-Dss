@@ -13,6 +13,20 @@ img{max-width:  100%;}
 
 @media screen and (min-width: 1200px){
     /* RESOLUÇÃO DE NO MINÍMO DE 1200 PX - NOTE/PC */
+
+    .container{
+        /* COLOCA O DISPLAY DO CONTAINER COMO GRID*/
+        display: grid;
+        grid-column: 65% 30%;  /* DUAS COLUNAS */
+        justify-content: space-between; /* CENTRALIZA CONTEUDO HORIZONTALMENTE- between: espaço entre eles*/
+        padding: 10px 5%; /* 10PX SUPERIOR/INFERIOR E 5% LATERAL*/
+        
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer"
+        ; /**/
+    }
 }
 
 
