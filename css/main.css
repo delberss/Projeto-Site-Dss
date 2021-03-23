@@ -30,6 +30,14 @@ img{max-width:  100%;}
     
     header{
         grid-area: header; /*identifica a area que colocamos no container*/
+        /* ADICIONA UM DISPLAY GRID, POIS ELE TEM SUA DIVISÃO INTERNA */
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-areas: 
+            "logo search"
+            "nav nav"
+            "ads ads"
+        ;
     }
 
     main{
