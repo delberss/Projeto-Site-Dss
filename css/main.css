@@ -27,17 +27,23 @@ img{max-width:  100%;}
             "footer footer"
         ; /**/
     }
-
+    
     header{
         grid-area: header; /*identifica a area que colocamos no container*/
+        height: 200px;
+        background: black;
     }
 
     main{
         grid-area: main; /*identifica a area que colocamos no container*/
+        height: 200px;
+        background: green;
     }
 
     footer{
         grid-area: footer; /*identifica a area que colocamos no container*/
+        height: 200px;
+        background: blue;
     }
 }
 
