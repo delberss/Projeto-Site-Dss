@@ -92,10 +92,101 @@ img{max-width:  100%;}
 
     /*==============================FIM DO HEADER ===================================*/
 
+
+    /*================================== MAIN =======================================*/
     main{
         grid-area: main; /*identifica a area que colocamos no container*/
+        margin-top: 5%;
+    }
+
+    /*================================== SLIDES =======================================*/
+
+    .slide{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-areas: 
+            "slide-foto slide-texto"
+            "slide-thumb slide-thumb"
+        ;
+        align-items: center;
+    }
+
+    .slide-foto{
+        grid-area: slide-foto;
+    }
+
+    .slide-texto{
+        grid-area: slide-texto;
+        padding: 0 5%;
+        line-height: 30px;
+    }
+    
+    .slide-thumb{
+        grid-area: slide-thumb;
+
+        display: grid;
+        grid-template-columns: repeat(5, 18%); /* Repete 19% 5 vezes, dando espaços de 1%*/
+        justify-content: space-between;
+        margin: 25px 0;
+    }
+
+    .slide-thumb div{
+        margin-top: 5px;
+    }
+
+
+    .slide-thumb div a{
+        display: block;
+        background: #FFF;
+        border-radius: 4px;
+        padding: 5px;
+        height: 100%;
+    }
+
+    .slide-thumb div a:hover{
+        background: rgb(172, 171, 171);
+    }
+
+    .slide-thumb div img{
+        border-radius: 4px;
+        max-height: 200px;
+    }
+
+    .slide-thumb div p {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    /*================================== FIM DOS SLIDES =======================================*/
+
+    /*================================== NOTICIA =======================================*/
+
+    .news{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-template-areas: 
+            "news-img news-texto"
+        ;
+        align-items: center;
+        justify-content: center;
+        line-height: 30px;
+    }
+
+    .news-img{
+        grid-area: news-img;
+    }
+
+    .news-img img{
+        width: 100%;
+    }
+    .news-texto{
+        grid-area: news-texto;
+        padding: 0 5%;
 
     }
+    /*================================== FIM DA NOTICIA =======================================*/
+
+    /*================================== FIM DA MAIN =======================================*/
 
     footer{
         grid-area: footer; /*identifica a area que colocamos no container*/
