@@ -40,7 +40,7 @@ img{max-width:  100%;}
         grid-template-columns: 50% 50%;
         grid-template-areas: 
             "logo search"
-            "nav nav"
+            "nav  nav"
         ;
         align-items: center;
     }
@@ -80,18 +80,23 @@ img{max-width:  100%;}
 
     .search svg{
         height: 1.5em;
-        color: rgb(37, 37, 92);
     }
 
     nav{
         grid-area: nav; /* define nome para o template area que sera usado no header*/
+        width: 65%;
+        align-items: center;
     }
 
     nav li{
         display: inline-block;
         font-weight: bold;
         font-size: 17px;
-        margin: 0 10px;
+        margin: 0 15px;
+    }
+
+    nav a {
+        color: rgb(43, 64, 104);
     }
 
     /*==============================FIM DO HEADER ===================================*/
@@ -259,5 +264,5 @@ svg{
     height: 2.3em;
     overflow: visible;
     vertical-align: -.125em;
-    color: rgb(36, 36, 139);
+    color: rgb(43, 64, 104);
 }
