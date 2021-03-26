@@ -188,10 +188,20 @@ img{max-width:  100%;}
 
     /*================================== FIM DA MAIN =======================================*/
 
+    /*================================== FOOTER =======================================*/
+
     footer{
         grid-area: footer; /*identifica a area que colocamos no container*/
-        
+        box-shadow: 0 10px 20px #ccc;
+        background: #eee;
+        padding: 20px 0;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin: 30px -5% -10px -5%;
     }
+
+    /*================================== FIM DO FOOTER =======================================*/
 }
 
 
