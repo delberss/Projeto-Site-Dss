@@ -33,14 +33,20 @@ img{max-width:  100%;}
         display: grid; /* ADICIONA UM DISPLAY GRID, POIS ELE TEM SUA DIVISÃO INTERNA */
         grid-template-columns: 10% 40% 50%;
         grid-template-areas: 
-            "button-menu logo search"
+            "button logo search"
             "nav nav nav"
         ;
         align-items: center;
     }
 
     .button-menu{
-        grid-area: button-menu;
+        grid-area: button;
+    }
+
+    .button-close{
+        grid-area: button;
+        padding: 2.5px;
+        display: none;
     }
 
     .logo{
