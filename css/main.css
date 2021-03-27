@@ -10,7 +10,7 @@ img{max-width:  100%;}
 
 
 /*==============================MOBILE===================================*/
-@media screen and (max-width: 480px){
+@media screen and (max-width: 1200px){
     /* ATÉ RESOLUÇÃO MÁXIMA DE 480 PX - MOBILE */
 
     .container{
