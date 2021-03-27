@@ -12,6 +12,261 @@ img{max-width:  100%;}
 /*==============================MOBILE===================================*/
 @media screen and (max-width: 480px){
     /* ATÉ RESOLUÇÃO MÁXIMA DE 480 PX - MOBILE */
+
+    .container{
+        /* COLOCA O DISPLAY DO CONTAINER COMO GRID*/
+        display: grid;
+        grid-template-columns: 100%;  /* DUAS COLUNAS */
+        padding: 10px 5%; /* 10PX SUPERIOR/INFERIOR E 5% LATERAL*/
+        
+        grid-template-areas:
+            "header"
+            "main"
+            "newsletter"
+            "footer"
+        ; /**/
+    }
+    /*============================== HEADER ===================================*/
+    header{
+        grid-area: header; /*identifica a area que colocamos no container*/
+        
+        display: grid; /* ADICIONA UM DISPLAY GRID, POIS ELE TEM SUA DIVISÃO INTERNA */
+        grid-template-columns: 10% 40% 50%;
+        grid-template-areas: 
+            "button-menu logo search"
+            "nav nav nav"
+        ;
+        align-items: center;
+    }
+
+    .button-menu{
+        grid-area: button-menu;
+    }
+
+    .logo{
+        grid-area: logo; /* define nome para o template area que sera usado no header*/
+
+        width: 100%;
+        padding: 0 5%;
+
+    }
+
+    .search{
+        grid-area: search; /* define nome para o template area que sera usado no header*/
+
+        display: grid;
+        grid-template-columns: 75% 20%;
+        grid-template-areas: "input-search button-search";
+        justify-content: end;
+    }
+
+    .input-search{
+        border: 0.5px solid rgb(197, 190, 190);
+        background: #EFEFEF;
+        padding: 10px;
+    }
+
+    .button-search{
+        border: 0.5px solid rgb(197, 190, 190);
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        vertical-align: top; /* CENTRALIZOU O BOTAO COM O INPUT*/
+    }
+
+    .button-search:hover{
+        background: rgb(172, 171, 171);
+    }
+
+    .search svg{
+        height: 1.5em;
+    }
+
+    nav{
+        display: none;
+        grid-area: nav; /* define nome para o template area que sera usado no header*/
+        width: 65%;
+        align-items: center;
+    }
+
+    nav li{
+        display: inline-block;
+        font-weight: bold;
+        font-size: 17px;
+        margin: 0 15px;
+    }
+
+    nav a {
+        color: rgb(43, 64, 104);
+    }
+
+
+
+    /*==============================FIM DO HEADER ===================================*/
+
+
+    /*================================== MAIN =======================================*/
+    main{
+        grid-area: main; /*identifica a area que colocamos no container*/
+        margin-top: 5%;
+    }
+
+    /*================================== SLIDES =======================================*/
+
+    .slide{
+        display: grid;
+        position: relative;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "slide-foto"
+            "slide-texto"
+            "slide-thumb"
+        ;
+        align-items: center;
+    }
+
+    .slide-foto{
+        grid-area: slide-foto;
+    }
+
+    .slide-texto{
+        grid-area: slide-texto;
+        position: absolute;
+        width: 100%;
+        padding: 15px 10px;
+        margin-bottom: 10px;
+        bottom: 0;
+        color: white;
+        font-size: 22px;
+        background: rgba(0,0,0,0.7);
+    }
+    .slide-texto p{
+        display: none;
+    }
+    
+    .slide-thumb{
+        grid-area: slide-thumb;
+
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+        margin: 25px 0;
+    }
+
+    .slide-thumb div{
+        margin-top: 10px;
+    }
+
+
+    .slide-thumb div a{
+        display: block;
+        background: #FFF;
+        border-radius: 4px;
+        padding: 5px;
+        height: 100%;
+    }
+
+    .slide-thumb div a:hover{
+        background: rgb(172, 171, 171);
+    }
+
+    .slide-thumb div img{
+        border-radius: 4px;
+        max-height: 300px;
+    }
+
+    .slide-thumb div p {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    /*================================== FIM DOS SLIDES =======================================*/
+
+    /*================================== NOTICIA =======================================*/
+
+    .news{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "news-img"
+            "news-texto"
+        ;
+        align-items: center;
+        justify-content: center;
+        line-height: 30px;
+    }
+
+    .news-img{
+        grid-area: news-img;
+    }
+
+    .news-img img{
+        width: 100%;
+    }
+    .news-texto{
+        grid-area: news-texto;
+        padding: 0 5%;
+
+    }
+    /*================================== FIM DA NOTICIA =======================================*/
+
+    /*================================== FIM DA MAIN =======================================*/
+
+    /*================================== NEWSLETTER =======================================*/
+    .newsletter{
+        grid-area: newsletter;
+        text-align: center;
+        margin: 30px -10% 0px -10%;
+        background: rgb(197, 190, 190);
+        box-shadow: 0 10px 20px #ccc;
+    }
+
+    .newsletter h2{
+        margin-top: 20px;
+        color: rgb(42, 91, 97);
+    }
+
+    .newsletter form{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .newsletter form input{
+        padding: 2%;
+        border-top-left-radius: 4px;
+        border: none;
+        text-align: center;
+    }
+
+    .newsletter form button{
+        padding: 2%;
+        border-radius: 4px;
+        border: none;
+        margin: 8px 0px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .newsletter form button:hover{
+        background: rgb(184, 182, 182);
+    }
+
+
+
+    /*================================== FIM NEWSLETTER =======================================*/
+
+    /*================================== FOOTER =======================================*/
+
+    footer{
+        grid-area: footer; /*identifica a area que colocamos no container*/
+        background: #eee;
+        padding: 10px 10px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin: 30px -5% -10px -5%;
+    }
 }
 
 
@@ -98,6 +353,8 @@ img{max-width:  100%;}
     nav a {
         color: rgb(43, 64, 104);
     }
+
+    .button-menu{display: none;}
 
     /*==============================FIM DO HEADER ===================================*/
 
