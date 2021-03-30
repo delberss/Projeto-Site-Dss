@@ -160,7 +160,7 @@ img{max-width:  100%;}
     }
 
     .slide-thumb div{
-        margin-top: 10px;
+        margin-bottom: 35px;
     }
 
 
@@ -394,6 +394,7 @@ img{max-width:  100%;}
         grid-area: slide-texto;
         padding: 0 5%;
         line-height: 30px;
+        margin-bottom: 10px;
     }
     
     .slide-thumb{
@@ -407,7 +408,7 @@ img{max-width:  100%;}
     }
 
     .slide-thumb div{
-        margin-top: 20px;
+        margin-bottom: 35px;
     }
 
 
@@ -648,6 +649,7 @@ img{max-width:  100%;}
         grid-area: slide-texto;
         padding: 0 5%;
         line-height: 30px;
+        margin-bottom: 10px;
     }
     
     .slide-thumb{
@@ -661,7 +663,7 @@ img{max-width:  100%;}
     }
 
     .slide-thumb div{
-        margin-top: 5px;
+        margin-bottom: 35px;
     }
 
 
